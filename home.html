@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>home</title>
+
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<section class="header">
+   <div class="logoandname">
+<img id="logoimg" src="./icons/shouldgo.png" alt="">
+   <a href="#home"  class="logo">Desfect</a>
+</div>
+
+   <nav class="navbar">
+      <a href="#home">home</a>
+      <a href="#whatwerecommend" >Recommendations</a>
+      <a href="#ourteamgem">About Us</a>
+   </nav>
+
+   <div id="menu-btn" class="fas fa-bars"></div>
+
+</section>
+
+<!-- header section ends -->
+
+
+
+
+<!-- Pop Up form -->
+<!-- A button to open the popup form -->
+<button class="open-button" onclick="openForm()">Submit </button>
+
+<!-- The form -->
+<div class="form-popup" id="myForm">
+  <form class="form-container" onsubmit="return false">
+    <h1>Details of a place</h1>
+    
+    <label ><b>Your Name</b></label>
+    <input id="personname" type="text" placeholder="Enter your name" required>
+    <label ><b>Place Name</b></label>
+    <input id="placename" type="text" placeholder="Enter Name of place" required>
+    <label ><b>Location in one line</b></label>
+    <input id="placelocation" type="text" placeholder="Enter Name of place location" required>
+
+   <label><b> Select Crowd </b></label>
+    <div class="box1">
+      <select  id="popselect">
+        <option>Less</option>
+        <option>Normal</option>
+        <option>High</option>
+        <option>Very High!</option>
+        
+      </select>
+    </div>
+
+    <br>
+    <br>
+
+    <label ><b>Upload image of the place</b></label>
+    <input type="file" id="myFile" name="filename">
+    
+
+    <button type="submit" id="submission1" class="btn">Submit</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+
+
+
+
+<!-- home section starts  -->
+
+<section id="home" class="home back-gra">
+
+   <div class="swiper home-slider">
+
+      <div class="swiper-wrapper">
+
+         <div class="swiper-slide slide" >
+            <div class="content">
+               <img src="icons/shouldgo.png" alt="logo" style="height: 100px;">
+               <h3><b>DesFect<b></h3>
+                  <p id="wanna">Pick best choice among different places around you while assuring safety and good health 😉.
+                  </p>
+               <!-- <p id="wanna">Wanna hangout with friends or family nearby? Use our service and get to know how safe it is to visit the place!!
+                  You just need to enter the name of the place below :)
+               </p> -->
+               <a href="#knowaboutplace" class="btn">Search</a>
+            </div>
+         </div>
+
+         
+         
+      </div>
+
+      
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- services section starts  -->
+
+<section class="services">
+
+   <h1 class="heading-title"> Our services </h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <img src="images/icon-1.png" alt="">
+         <h3>Weather</h3>
+      </div>
+
+  
+      <div class="box">
+         <img src="images/icon-3.png" alt="">
+         <h3>Population</h3>
+      </div>
+
+      <div class="box">
+         <img src="images/icon-4.png" alt="">
+         <h3>Pollution</h3>
+      </div>
+
+      <div class="box">
+         <img src="images/icon-5.png" alt="">
+         <h3>Ease to Access</h3>
+      </div>
+
+    
+
+   </div>
+
+</section>
+
+<!-- services section ends -->
+
+
+<!-- home packages section starts  -->
+
+<section id="whatwerecommend" class="home-packages">
+
+   <h1 class="heading-title"> Our Recommendations </h1>
+
+   <div class="box-container RecoBox">
+
+      
+      
+   </div>
+
+
+
+</section>
+
+<!-- home packages section ends -->
+
+<!-- home offer section starts  -->
+
+<section class="home-offer">
+  
+   <div class="content" id="knowaboutplace">
+      <h3> know about place of your choice</h3>
+      <p>Wanna hangout with friends or family nearby? Use our service and get to know how safe it is to visit the place!!
+         You just need to enter the name of the place below :)
+      </p>
+      <br>
+      <br>
+      <form >
+         <label class="increase-size" for="fname" id="firstname" >Enter Name of the place</label>
+         <br>
+         <div class="search-container">
+            <input type="text" id="fname" name="search" placeholder="Search..." class="search-input">
+            <a href="#" class="search-btn">
+                    <i class="fas fa-search"></i>      
+            </a>
+        </div>
+        <br>
+        <br>
+
+         <button id="submission" type="button" >Submit</button>
+  </form>
+   </div>
+   <div class="searchResult"></div>
+</section>
+
+
+<div id="howtoguide">
+   <div class="abouttext">
+   <header class="c-header">
+      <h1 class="heading-title">How to use</h1>
+      <p>
+         After knowing about the conditons there compare with different places and choose a right spot for hanging out with friends or family.
+         Your health , your ease is our priority.      
+         <br>
+         <br>
+         Just enter the name of the place you want to visit , you will get all the data regarding the local place like AQI , Weather , Population , Temperature etc.</p>
+    </header>
+   </div>
+   <div class="aboutimage">
+      <img class="aboutimagesize" src="icons/help.gif" alt="help-img">
+   </div>
+</div>
+<!-- home about section starts  -->
+<h1 id="ourteamgem" class="heading-title">Our Team</h1>
+<div class="container flexingteam">
+   
+   <div class="team">
+     <div class="team-img">
+       <img src="./images/yashfac.jpg" alt="Team Image">
+       <div class="team-social">
+         <a class="social-tw" href="https://twitter.com/yashArrived"><i class="fab fa-twitter"></i></a>
+       
+         <a class="social-li" href="https://www.linkedin.com/in/yash-tiwari-966648158/"><i class="fab fa-linkedin-in"></i></a>
+         <a class="social-in" href="https://www.instagram.com/yasharrived/"><i class="fab fa-instagram"></i></a>
+         <a class="social-li" href="https://github.com/tiwari74"><i class="fab fa-github"></i></a>
+       </div>
+     </div>
+     <div class="team-content">
+      <h2>Yash Tiwari</h2>
+      <h3>@yashArrived</h3>
+      <h3>Developer @GDSC Jss Noida</h3>
+      <p>Developing faster than the speed of light. A tenacious sophomore</p>
+     
+    </div>
+
+   </div>
+     <div class="team team-2">
+      <div class="team-img">
+        <img src="./images/profilr.jpg" alt="Team Image">
+        <div class="team-social">
+          <a class="social-tw" href="https://twitter.com/yuvrajy88012347"><i class="fab fa-twitter"></i></a>
+          <!-- <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a> -->
+          <a class="social-li" href="https://www.linkedin.com/in/yuvraj-singh-yadav-aa9488140/"><i class="fab fa-linkedin-in"></i></a>
+          <a class="social-in" href="https://www.instagram.com/yuvrajyadav9448/"><i class="fab fa-instagram"></i></a>
+          <a class="social-li" href="https://github.com/yyuvraj54"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      <div class="team-content">
+         <h2>Yuvraj Yadav</h2>
+         <h3>@yyuvraj54</h3>
+         <h3>Jss Noida</h3>
+         <p>I am a Full stack Web developer cureently in second year of my college.</p>
+         </div>
+   </div>
+   </div>
+
+<!-- home about section ends -->
+
+
+<!-- home offer section ends -->
+
+
+
+
+
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+   <div class="box-container">
+
+    
+
+     
+      <div class="box">
+         <h3>contact info</h3>
+         <a href="#"> <i class="fas fa-phone"></i> +91-9118850768 </a>
+         <a href="#"> <i class="fas fa-phone"></i> +91-8368278705 </a>
+         <a href="#"> <i class="fas fa-envelope"></i> yashutiwari22@gmail.com </a>
+         <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJlDSqLTGRRzKfrBGwSdCFqlTsnSkspjpdZXqSNVjlXTpDzkGLWjWbCSKGDRCdVfZRgcnwg"> <i class="fas fa-envelope"></i> yyuvraj545@gmail.com </a>
+         
+      </div>
+
+      
+
+   </div>
+
+   <div class="credit"> @ALL RIGHT RESERVED </div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+<script src="js/script.js"></script>
+<script src="js/main.js" type="module"></script>
+
+</body>
+</html>
